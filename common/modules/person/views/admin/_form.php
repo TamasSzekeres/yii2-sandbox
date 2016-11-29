@@ -12,7 +12,7 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin([
         'id' => 'person-form',
-        'enableAjaxValidation' => true,
+        'enableAjaxValidation' => false,
         'enableClientValidation' => true,
     ]); ?>
 

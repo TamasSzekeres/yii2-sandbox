@@ -25,6 +25,7 @@ class Person extends ActiveRecord
     {
 //        return Yii::$app->db->getSelectedDb();
         return Yii::$app->db;
+//        return Yii::$app->sqlite;
     }
     
     /**
@@ -72,7 +73,7 @@ class Person extends ActiveRecord
             'id' => Yii::t('person', 'ID'),
             'first_name' => Yii::t('person', 'First Name'),
             'last_name' => Yii::t('person', 'Last Name'),
-            '' => Yii::t('person', 'Age'),
+            'age' => Yii::t('person', 'Age'),
             'created_at' => Yii::t('person', 'Created At'),
             'updated_at' => Yii::t('person', 'Updated At'),
         ];

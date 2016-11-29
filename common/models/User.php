@@ -31,7 +31,7 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public static function getDb()
     {
-        return Yii::$app->mysql;
+        return Yii::$app->db;
     }
 
     /**

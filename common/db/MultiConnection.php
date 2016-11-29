@@ -61,6 +61,9 @@ class MultiConnection extends Connection
                 $this->pdo = $db->pdo;
                 $this->pdoClass = $db->pdoClass;
                 //$this->schema = $db->schema;
+                $this->username = $db->username;
+                $this->password = $db->password;
+                $this->attributes = $db->attributes;
 
                 Yii::info('opening connection - '.$dbComponent, __METHOD__);
                 $this->selectedDb = $db;
