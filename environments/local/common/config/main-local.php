@@ -1,12 +1,26 @@
 <?php
 return [
     'components' => [
-        'db' => [
+        'mysql' => [
             'class' => 'yii\db\Connection',
             'dsn' => 'mysql:host=localhost;dbname=sandbox',
             'username' => 'root',
             'password' => '',
             'charset' => 'utf8',
+        ],
+        'sqlite' => [
+            'class' => 'yii\db\Connection',
+            'dsn' => 'sqlite:@common/sqlite/db.sqlite',
+            'username' => 'root',
+            'password' => '',
+            'charset' => 'utf8',
+        ],
+        'db' => [
+            'class' => common\db\MultiConnection::class,
+            'dbs' => [
+                'mysql',
+                'sqlite',
+            ],
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',

@@ -21,6 +21,15 @@ class Person extends ActiveRecord
     /**
      * @inheritdoc
      */
+    public static function getDb()
+    {
+//        return Yii::$app->db->getSelectedDb();
+        return Yii::$app->db;
+    }
+    
+    /**
+     * @inheritdoc
+     */
     public static function tableName()
     {
         return '{{%person}}';
@@ -38,7 +47,7 @@ class Person extends ActiveRecord
                     ActiveRecord::EVENT_BEFORE_INSERT => ['created_at', 'updated_at'],
                     ActiveRecord::EVENT_BEFORE_UPDATE => ['updated_at'],
                 ],
-                'value' => new \yii\db\Expression('NOW()'),
+                'value' => time(),
             ],
         ];
     }
