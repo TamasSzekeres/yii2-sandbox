@@ -15,15 +15,5 @@ $this->title = 'My Yii Application';
     </div>
 
     <div class="body-content">
-
-        <?php
-            echo "hello<br>\n";
-            $db = \Yii::$app->db;
-            print_r($db->dbs);
-            $db->open();
-            $sd = $db->getSelectedDb();
-            echo "<br>selectedDb=".($sd ? 'not null':'null')."\n";
-        ?>
-        
     </div>
 </div>
