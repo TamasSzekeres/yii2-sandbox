@@ -11,6 +11,9 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'console\controllers',
+    'controllerMap' => [
+        'try' => \common\modules\tries\controllers\ConsoleController::class,
+    ],
     'components' => [
         'log' => [
             'targets' => [

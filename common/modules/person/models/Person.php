@@ -27,7 +27,7 @@ class Person extends ActiveRecord
         return Yii::$app->db;
 //        return Yii::$app->sqlite;
     }
-    
+
     /**
      * @inheritdoc
      */
@@ -52,18 +52,19 @@ class Person extends ActiveRecord
             ],
         ];
     }
-    
+
     /**
      * @inheritdoc
      */
     public function rules()
     {
         return [
+            [['first_name', 'last_name', 'age'], 'required'],
             [['first_name', 'last_name'], 'string'],
             [['age'], 'integer'],
         ];
     }
-    
+
     /**
      * @inheritdoc
      */

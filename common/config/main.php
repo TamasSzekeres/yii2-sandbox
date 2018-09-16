@@ -27,8 +27,7 @@ return [
         'translatemanager' => [
             'class' => lajax\translatemanager\Module::class,
         ],
-        'person' => [
-            'class' => common\modules\person\Module::class,
-        ],
+        'person' => common\modules\person\Module::class,
+        'tries' => common\modules\tries\Module::class,
     ],
 ];
