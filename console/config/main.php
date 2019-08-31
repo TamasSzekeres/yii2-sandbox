@@ -12,7 +12,6 @@ return [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'console\controllers',
     'controllerMap' => [
-        'try' => \common\modules\tries\controllers\ConsoleController::class,
     ],
     'components' => [
         'log' => [
